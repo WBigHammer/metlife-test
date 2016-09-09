@@ -1,0 +1,224 @@
+/* 
+* @Author: Administrator
+* @Date:   2016-05-18 15:39:01
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-05-24 17:01:45
+*/
+
+/*琛ㄦ牸妯″潡鏍峰紡*/
+.tableFrameA{
+	border: #C8CDCD solid 2px;
+	padding-left: 2em;
+}
+
+/*鏌ヨ鏉′欢浣嶇疆*/
+.tfcPositionA{
+	/*border: red solid 1px;*/
+	position: relative;
+}
+.tfcPositionB{
+	border: #C8CDCD solid 2px;
+	position: relative;
+	padding: 40px 0;
+	margin-top: 48px;
+	width: 86%;
+}
+
+/*绉嶇被瀵艰埅*/
+.kpiKind{
+	position: absolute;
+	left: -2px;
+	top: -29px;
+}
+
+/*绉嶇被瀵艰埅li鏍峰紡*/
+.kpiKindLi{
+	float: left;
+	border: #C8CDCD solid 2px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 8px;
+	margin-right: 2px;
+	border-radius: 4px 4px 0 0;
+	border-bottom: none;
+	background: #F1F0EC;
+	cursor: pointer;
+}
+/*绉嶇被瀵艰埅li褰撳墠閫夋嫨椤规牱寮*/
+.current{
+	background: #fff;
+}
+
+.indexDiv{
+	width: 39%;
+	float: left;
+	margin: 0 3em;
+	/*border: yellow solid 1px;*/
+}
+.indexDivA{
+	width: 42%;
+	float: left;
+	margin: 0 3em;
+	/*border: yellow solid 1px;*/
+}
+
+.indexCheck{
+	border: #999 solid 2px;
+	height: 100px;
+	padding: 5px;
+	overflow-y: auto;
+}
+.indexUlLi{
+	line-height: 20px;
+	cursor: pointer;
+}
+
+/*绠ご鏍峰紡*/
+.rightArrow,.leftArrow{
+	display: block;
+	width: 28px;
+	height: 21px;
+	background: url(../../images/img/right.jpg) no-repeat center center;
+	position: absolute;
+	left: 45%;
+	top:50px;
+	margin-left: -20px;
+	padding: 5px;
+	border: #7A98B3 solid 2px;
+	border-radius: 4px;
+}
+.leftArrow{
+	background: url(../../images/img/left.jpg) no-repeat center center;
+	top:100px;
+}
+.rightArrowA{
+	left: 49%;
+	top:90px;
+}
+.leftArrowA{
+	left: 49%;
+	top:135px;
+}
+
+/*鍚嶇Оspan鏍峰紡*/
+.tabSpanA{
+	text-indent: 5em;
+}
+.tabSpanB{
+	text-indent: 4em;
+}
+.tabSpanC{
+	text-indent: 1em;
+}
+.tabSpanD{
+	text-indent: 7em;
+}
+.tabSpanE{
+	padding-right: 3em;
+}
+.tabSpanF{
+	text-indent: 2em;
+}
+.tabSpanG{
+	text-indent: 3em;
+}
+.tabSpanH{
+	padding-right: 5em;
+}
+.tabSpanI{
+	padding-right: 4em;
+}
+.tabSpanJ{
+	width: 80px;
+}
+.tabSpanK{
+	width: 110px;
+}
+
+/*涓嬫媺妗唖elect鏍峰紡*/
+.tabSelectA{
+	width: 100%;
+	border: none;
+	outline: none;
+}
+.tabSelectB{
+	/*color: red;*/
+	width: 56%;
+}
+
+/*琛孭鏍峰紡*/
+.tabPA{
+	width: 100%;
+	height: 100px;
+}
+.tabPB{
+	float: none;
+	width: 80%;
+}
+.tabPC{
+	float: none;
+	margin: 15px 0;
+	width: 100%;
+}
+.tabPD{
+	float: none;
+	width: 100%;
+}
+.tabPE{
+	width: 100%;
+	height: 60px;
+}
+.tabPF{
+	float: none;
+	width: 100%;
+}
+.tabPG{
+	float: none;
+	width: 94%;
+}
+
+/*杈撳叆妗唅nput鏍峰紡*/
+.tabInputA{
+	width: 80%;
+}
+.tabInputB{
+	width: 80%;
+}
+
+/*鏂囨湰鍩焧extarea鏍峰紡*/
+.tabTextAreaA{
+	height: 60px;
+}
+
+.fieldsetBorder{
+	border: #E4E4DB solid 2px;
+	border-radius: 3px;
+	width: 89%;
+	position: relative;
+	padding: 20px 0 10px;
+	margin-top: 24px;
+}
+.legendFont{
+	color: #3B71DD;
+	font-size: 14px;
+	position: absolute;
+	left: 20px;
+	top: -12px;
+	padding: 0 5px;
+	background: #fff;
+}
+
+/*鎸夐挳button鏍峰紡*/
+.tabBtnA{
+	float: none;
+	letter-spacing: 1px;
+}
+.tabBtnB{
+	position: absolute;
+	left: 60%;
+	top: 0;
+}
+.btnCenter{
+	text-align: center;
+
+}

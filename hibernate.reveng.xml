@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="A_AH_CM" schema="SCOTT" class="AhCm"></table>
+	<table name="A_BXS_FOREIGN_CAPITAL" schema="SCOTT"
+		class="BxsForeignCapital">
+	</table>
+	<table name="A_CSO_NEW_CLIENT" schema="SCOTT"
+		class="CsoNewClient">
+	</table>
+	<table name="A_QUICK_VIEW_BPS3" schema="SCOTT"
+		class="QuickViewBPS3">
+	</table>
+	<table name="A_SALES_ACTUAL_TO_AFYP" schema="MIS"></table>
+</hibernate-reverse-engineering>

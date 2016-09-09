@@ -1,0 +1,281 @@
+/* 
+* @Author: Administrator
+* @Date:   2016-05-06 14:01:35
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-05-25 11:29:44
+*/
+@charset "utf-8";
+html,body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,img { margin: 0; padding: 0; border: 0;}
+html { color: #000; }
+html,body { height: 100%; }
+body,button,input,select,textarea { font-size: 12px; font-family: 'Microsoft Yahei','微软雅黑', \5FAE\8F6F\96C5\9ED1,'宋体',\5b8b\4f53,arial,'Hiragino Sans GB',Tahoma,Arial,Helvetica; }
+h1,h2,h3,h4,h5,h6{ font-size:12px; font-weight:normal;}
+ul,ol,li,dl,dd,dt{list-style: none;}
+em { font-style: normal; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+legend { color: #000; }
+fieldset,img { border:none; }
+label,button { cursor: pointer; }
+
+img{display:inline-block; }
+/*解决IE图片缩放失真*/
+img { -ms-interpolation-mode: bicubic; }
+/*清除浮动*/
+.clearfix:after { content: ''; display: block; height: 0; clear: both; }
+.clearfix { zoom: 1; }
+.clear { clear: both; }
+/*连续英文、数字换行*/
+.wordwrap { word-break: break-all; word-wrap: break-word; }
+/*单行文字超出显示省略号*/
+.omg{overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+/*=========================初始化分割线=========================*/
+
+
+/********************查询表格部分--开始********************/
+.tableFrame{
+	width: 88%;
+	margin: 30px auto;
+	/*border: yellowgreen solid 1px;*/
+	position: relative;
+	border: transparent solid 1px;
+}
+
+/****表格模板****/
+.tabFraCross{
+	margin: 20px auto;
+}
+/*表格查询条件位置*/
+.tfcPosition{
+	position: relative;
+}
+
+/****标题h1、h2、h3样式****/
+.tabTitleOne{
+	font-size: 24px;
+	margin: 20px 0 15px;
+	font-weight: bold;
+}
+.tabTitleTwo{
+	font-size: 20px;
+	margin: 20px 0 15px;
+	font-weight: bold;
+}
+.tabTitleThree{
+	font-size: 16px;
+	margin: 20px 0 15px;
+	font-weight: bold;
+}
+
+/****************查询条件部分****************/
+/****搜索条件行P样式****/
+.tabP{
+	line-height: 24px;
+	margin-bottom: 10px;
+	float: left;
+	width: 50%;
+}
+/****搜索条件名span样式****/
+.tabSpan{
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 10px;
+}
+/****下拉框select样式****/
+.tabSelect{
+	/*border: none;*/
+	line-height: 24px;
+	height: 24px;
+	width: 50%;
+	border: #BDCEDE solid 2px;
+	-moz-box-sizing: content-box; /* Firefox */
+	-webkit-box-sizing: content-box; /* chorme、Safari */
+	-o-box-sizing: content-box; /* Opera */
+	-ms-box-sizing: content-box; /* IE */
+	box-sizing: content-box;
+}
+/****输入框input样式****/
+.tabInput{
+	height: 24px;
+	width: 50%;
+	border: #BDCEDE solid 2px;
+	text-indent: 5px;
+}
+
+/****复选框checkbox样式****/
+.tabCheckbox{
+	margin-right: 5px;
+	line-height: 28px;
+	vertical-align:middle;
+}
+
+/****查询按钮button****/
+.tabBtn{
+	border: #7A98B2 solid 2px;
+	border-radius: 4px;
+	background: #fff;
+	padding: 5px 10px;
+	margin: 30px 5px 0;
+	float: right;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/****页数按钮****/
+.pageBtns{
+	float: right;
+	/*border: red solid 1px;*/
+}
+.pageBtn{
+	border: #7A98B2 solid 1px;
+	border-radius: 2px;
+	background: #fff;
+	padding: 5px 10px;
+	margin: 30px 5px 0;
+	float: left;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+/****查询结果显示表格部分****/
+/****表格table样式****/
+.tabTable{
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+/****表格th、td样式****/
+.tabTh,.tabTd{
+	padding: 5px;
+	border: #999 solid 1px;
+	height: 24px;
+	line-height: 24px;
+}
+.tabTh{
+	background-color: #EBEADB;
+	font-size: 14px;
+}
+/********************查询表格部分--结束********************/
+
+
+/********************饼图、折线图部分--开始********************/
+.lineCharts,.pieCharts{
+	float: left;
+	height: 400px;
+	width: 50%;
+	/*border: yellowgreen solid 1px;*/
+}
+/*.pieCharts{
+	margin-left: -4px;
+}*/
+/********************饼图、折线图部分--结束********************/
+
+
+/********************固定表格部分--开始********************/
+.tabFraLeft,.tabFraRight{
+	float: left;
+	height: 369px;
+	padding-left: 4%;
+	padding-top: 2%;
+	overflow-y: auto;
+}
+
+/*左侧树结构*/
+.tabFraLeft{
+	width: 26%;
+}
+
+.coH1{
+	font-size: 16px;
+	margin-bottom: 3px;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.cLeftSecond li{
+	margin-left: 1.5em;
+}
+.csH2{
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.ctH3{
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.cfH4{
+	font-size: 12px;
+	cursor: pointer;
+}
+
+/*右侧侧树结构*/
+.tabFraRight{
+	width: 66%;
+}
+.tabFrRiTiOne{
+	font-size: 24px;
+	text-align: center;
+	line-height: 40px;
+}
+.tabFrRiTable{
+	width: 88%;
+	margin: 20px auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+/********************固定表格部分--结束********************/
+
+
+/********************指标基本信息（zbjbxx）部分代码--开始********************/
+.secondIndex{
+	/*border:orange solid 1px;*/
+	margin-top: 20px;
+}
+.siLi{
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 28px;
+	/*border: red solid 1px;*/
+}
+.siDiv{
+	display: inline-block;
+	width: 45%;
+	/*border: blue solid 1px;*/
+}
+.sichecked{
+	display: inline-block;
+	width: 35%;
+	/*border: blue solid 1px;*/
+}
+.secondIndex li p{
+	display: inline-block;
+	width: 80px;
+}
+/********************指标基本信息（zbjbxx）部分代码--结束********************/
+
+
+.bigTitle{
+	text-align: center;
+	line-height: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 20px;
+}
+
+/*倾斜i样式*/
+.tabI{
+	font-style: normal;
+	margin-left: 5px;
+}
+/*文本域样式*/
+.tabTextArea{
+	height: 100px;
+	width: 75%;
+	border: #BDCEDE solid 2px;
+	text-indent: 5px;
+	vertical-align:middle;
+	resize: none;
+	line-height: 20px;
+}

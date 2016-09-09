@@ -1,0 +1,527 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Export html table to excel and csv using jquery</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="common.css">
+<link rel="stylesheet" type="text/css" href="tablesModel.css">
+<link rel="stylesheet" type="text/css" href="AgentDaily.css">
+<script type="text/javascript"  src="tableExport.jquery.plugin-master/jquery-1.11.1.min.js"></script>
+<script type="text/javascript"  src="tableExport.jquery.plugin-master/jquery.base64.js"></script>
+<script type="text/javascript"	src="tableExport.jquery.plugin-master/tableExport.js"></script>
+<script type="text/javascript"	src="tableExport.jquery.plugin-master/html2canvas.js"></script>
+<script type="text/javascript"	src="tableExport.jquery.plugin-master/jspdf/jspdf.js"></script>
+<script type="text/javascript"	src="tableExport.jquery.plugin-master/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript"	src="tableExport.jquery.plugin-master/jspdf/libs/base64.js"></script>
+
+<script>
+	function printdiv(printpage) {
+		
+// 		var printData = document.getElementById(printpage).innerHTML; 
+// 		window.document.body.innerHTML = printData;  
+// 		window.print(); 
+		
+		var headstr = "<html><head><title></title></head><body>";
+		var footstr = "</body>";
+		var printData = document.getElementById(printpage).innerHTML;
+		var oldstr = document.body.innerHTML;
+		document.body.innerHTML = headstr + printData + footstr;
+		window.print();
+		document.body.innerHTML = oldstr;
+		return false;
+	}
+</script>	
+	
+	
+</head>
+<body>
+<!-- 	[align=right] -->
+	<br>
+	<br>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'excel', escape: 'false'});">Excel
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'png', escape: 'false'});">png
+		Export(点击后鼠标右键保存图片)</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'xml', escape: 'false'});">xml
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'doc', escape: 'false'});">doc
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'powerpoint', escape: 'false'});">powerpoint
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'pdf', escape: 'false'});">pdf
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'csv', escape: 'false'});">csv
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'txt', escape: 'false'});">txt
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'sql', escape: 'false'});">sql
+		Export</button>
+	<button class="btn btn-success"
+		onClick="$('#customers').tableExport({type: 'json', escape: 'false'});">json
+		Export</button>
+	
+	<button class="btn btn-success" onClick="printdiv('customers');"> Browser pdf
+		Export</button>
+	<br>
+	<br> 
+<!-- 	[/align] -->
+	<!-- <table id="customers" class="table table-striped table-bordered">
+		<thead>
+			<tr class='warning'>
+				<th>Country</th>
+				<th>Population</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>中国</td>
+				<td>1,363,480,000</td>
+				<td>March 24, 2014</td>
+			</tr>
+			<tr>
+				<td>India</td>
+				<td>1,241,900,000</td>
+				<td>March 24, 2014</td>
+			</tr>
+			<tr>
+				<td>United States</td>
+				<td>317,746,000</td>
+				<td>March 24, 2014</td>
+			</tr>
+			<tr>
+				<td>Indonesia</td>
+				<td>249,866,000</td>
+				<td>July 1, 2013</td>
+			</tr>
+			<tr>
+				<td>Brazil</td>
+				<td>201,032,714</td>
+				<td>July 1, 2013</td>
+			</tr>
+		</tbody>
+	</table> -->
+	
+	  <table id="customers" class="tabTable tabTableADA">
+			  	<!-- <thead>
+					<tr class='warning'>
+						<th>Country</th>
+						<th>Population</th>
+						<th>Date</th>
+						<td>Date</td>
+					</tr>
+					<tr>
+						<td>中国</td>
+						<td>1,363,480,000</td>
+						<td>March 24, 2014</td>
+						<td>March 24, 2014</td>
+					</tr>
+				</thead> -->
+	  			<tr>
+					<th class="tabTh tabThA" >1   </th>
+					<th class="tabTh tabThA" >1   </th>
+				</tr>
+				<tr style="display:none">
+					<th class="tabTh tabThA" style="visibility:hidden">2 tr display:none  th  visibility:hidden</th>
+					<th class="tabTh tabThA" style="display:none">2  tr display:none  th   display:none</th>
+				</tr>
+				<tr style="visibility:hidden" >
+					<th class="tabTh tabThA" style="visibility:hidden">3 tr visibility:hidden   th visibility:hidden</th>
+					<th class="tabTh tabThA" style="display:none">3 tr visibility:hidden  th display:none</th>
+				</tr>
+				<tr>
+					<th class="tabTh tabThA" style="visibility:hidden"> 4    th visibility:hidden</th>
+					<th class="tabTh tabThA" style="display:none">4    th display:none</th>
+				</tr>
+				<tr>
+					<th class="tabTh tabThA" colspan="17">2016年5月（4.23-5.24，<em>21</em>个工作日）</th>
+				</tr>
+				<tr>
+					<th class="tabTh tabThA" rowspan="3">城市代码</th>
+					<th class="tabTh tabThA" rowspan="3">城市</th>
+					<th class="tabTh tabThA" colspan="12">（4.23-5.20）承保，剩余<em>2</em>个工作日</th>
+					<th class="tabTh tabThA" colspan="3" rowspan="2">年度累计承保追踪</th>
+				</tr>
+				<tr>
+					<th class="tabTh tabThA" colspan="5">MTD实际达成</th>
+					<th class="tabTh tabThA" colspan="7">BP 达成追踪</th>
+				</tr>
+				<tr>
+					<th class="tabTh tabThB">受理ANP</th>
+					<th class="tabTh tabThB">承保ANP</th>
+					<th class="tabTh tabThB">受理Case</th>
+					<th class="tabTh tabThB">承保Case</th>
+					<th class="tabTh tabThB">受理活动率</th>
+					<th class="tabTh tabThC">BP受理目标ANP('000)</th>
+					<th class="tabTh tabThC">BP受理达成率ANP</th>
+					<th class="tabTh tabThB">BP承保目标ANP('000)</th>
+					<th class="tabTh tabThC">BP承保达成率ANP</th>
+					<th class="tabTh tabThB">预定达成进度</th>
+					<th class="tabTh tabThC">BP受理达成进度落差</th>
+					<th class="tabTh tabThC">BP承保达成进度落差</th>
+					<th class="tabTh tabThC">承保NewANP累计达成('000)</th>
+					<th class="tabTh tabThB">YTD BP目标ANP('000)</th>
+					<th class="tabTh tabThC">YTD BP目标达成率ANP</th>
+				</tr>
+				<tr>
+					<td class="tabTd">BJ</td>
+					<td class="tabTd">北京</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">SH</td>
+					<td class="tabTd">上海</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">CQ</td>
+					<td class="tabTd">重庆</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">GZ</td>
+					<td class="tabTd">广州</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">SY</td>
+					<td class="tabTd">沈阳</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">DL</td>
+					<td class="tabTd">大连</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd"></td>
+					<td class="tabTd">江苏</td>
+					<td class="tabTd">9,376,272</td>
+					<td class="tabTd">5,915,752</td>
+					<td class="tabTd">1,565</td>
+					<td class="tabTd">1,027</td>
+					<td class="tabTd">61.6%</td>
+					<td class="tabTd">9,690</td>
+					<td class="tabTd">96.8%</td>
+					<td class="tabTd">8,075</td>
+					<td class="tabTd">73.3%</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">44,729</td>
+					<td class="tabTd">37,400</td>
+					<td class="tabTd">119.6%</td>
+				</tr>
+				<tr>
+					<td class="tabTd">CD</td>
+					<td class="tabTd">成都</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">HZ</td>
+					<td class="tabTd">杭州</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">TJ</td>
+					<td class="tabTd">天津</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">WH</td>
+					<td class="tabTd">武汉</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd"></td>
+					<td class="tabTd tabThE">合计</td>
+					<td class="tabTd tabThE">51,514,903</td>
+					<td class="tabTd tabThE">33,957,292</td>
+					<td class="tabTd tabThE">8,132</td>
+					<td class="tabTd tabThE">5,772</td>
+					<td class="tabTd tabThE">54.5%</td>
+					<td class="tabTd tabThE">74,299</td>
+					<td class="tabTd tabThE">69.3%</td>
+					<td class="tabTd tabThE">61,916</td>
+					<td class="tabTd tabThE">54.8%</td>
+					<td class="tabTd tabThE">#N/A</td>
+					<td class="tabTd tabThE">#N/A</td>
+					<td class="tabTd tabThE">#N/A</td>
+					<td class="tabTd tabThE">226,081</td>
+					<td class="tabTd tabThE">286,769</td>
+					<td class="tabTd tabThE">78.8%</td>
+				</tr>
+				<tr>
+					<td class="tabTd">NJ</td>
+					<td class="tabTd">南京</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">WX</td>
+					<td class="tabTd">无锡</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<td class="tabTd">CZ</td>
+					<td class="tabTd">常州</td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+					<td class="tabTd"></td>
+				</tr>
+				<tr>
+					<th class="tabTh" colspan="17">&nbsp;</th>
+				</tr>
+				<tr>
+					<td class="tabTd"></td>
+					<th class="tabTh tabThD" colspan="16">说明：集群1（北京、天津），集群2（辽宁、大连、广东、重庆），集群3:（上海、江苏、浙江、四川、武汉）</th>
+				</tr>
+				<tr>
+					<td class="tabTd"></td>
+					<th class="tabTh" class="tabTd">集群1:</th>
+					<td class="tabTd">13,134,819</td>
+					<td class="tabTd">9,410,315</td>
+					<td class="tabTd">2,045</td>
+					<td class="tabTd">1,439</td>
+					<td class="tabTd">49.2%</td>
+					<td class="tabTd">19,893</td>
+					<td class="tabTd">66.0%</td>
+					<td class="tabTd">16,578</td>
+					<td class="tabTd">56.8%</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">63,813</td>
+					<td class="tabTd">76,780</td>
+					<td class="tabTd">83.1%</td>
+				</tr>
+				<tr>
+					<td class="tabTd"></td>
+					<th class="tabTh" class="tabTd">集群2:</th>
+					<td class="tabTd">16,073,888</td>
+					<td class="tabTd">9,665,662</td>
+					<td class="tabTd">2,602</td>
+					<td class="tabTd">1,900</td>
+					<td class="tabTd">56.0%</td>
+					<td class="tabTd">21,865</td>
+					<td class="tabTd">73.5%</td>
+					<td class="tabTd">18,221</td>
+					<td class="tabTd">53.0%</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">63,240</td>
+					<td class="tabTd">84,392</td>
+					<td class="tabTd">74.9%</td>
+				</tr>
+				<tr>
+					<td class="tabTd"></td>
+					<th class="tabTh" class="tabTd">集群3:</th>
+					<td class="tabTd">22,306,196</td>
+					<td class="tabTd">14,881,314</td>
+					<td class="tabTd">3,485</td>
+					<td class="tabTd">2,433</td>
+					<td class="tabTd">56.7%</td>
+					<td class="tabTd">24,287</td>
+					<td class="tabTd">91.8%</td>
+					<td class="tabTd">20,240</td>
+					<td class="tabTd">73.5%</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">#N/A</td>
+					<td class="tabTd">98,924</td>
+					<td class="tabTd">92,774</td>
+					<td class="tabTd">106.6%</td>
+				</tr>
+            </table>
+	</div>
+</body>
+</html>

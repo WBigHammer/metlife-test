@@ -1,0 +1,49 @@
+/* 
+* @Author: Administrator
+* @Date:   2016-07-18 14:42:39
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-07-20 14:21:31
+*/
+
+
+/*表头单元格设置*/
+.tabTh{
+	width: 5%;
+	background-color: #fff;
+}
+
+.tabThA{
+	background-color: #DCE6F1;
+}
+.tabThB{
+	background-color: #FFFF00;
+}
+.tabThC{
+	background-color: #00B0F0;
+}
+.tabThD{
+	text-align:left;
+	color:red;
+}
+.tabThE{
+	background-color: #C5D9F1;
+}
+.tabThF{
+	background-color: #FFFFCC;
+}
+
+/*标准单元格设置*/
+.tabTd{
+	width: 5%;
+}
+
+/*模板附加样式*/
+.tabFraCrossA{
+	max-height:480px;
+	overflow: auto;
+}
+
+/*特色数字*/
+em{
+	color:red;
+}
